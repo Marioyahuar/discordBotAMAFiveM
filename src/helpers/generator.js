@@ -12,7 +12,7 @@ const openai = new OpenAIApi(configuration);
 
 async function askMeAnything(subject, pregunta) {
   console.log("preguntando");
-  const prompt = `En base exclusivamente a la información que te voy a proporcionar, responde lo siguiente con un tweet sin hashtags: ${pregunta}.
+  const prompt = `En base exclusivamente a la información que te voy a proporcionar, responde a una comunidad de jugadores de gta 5 roleplay con no más de 120 tokens la siguiente pregunta:${pregunta}.
   Información:
   "${contenidos[subject]}"`;
   const response = await openai.createCompletion({
